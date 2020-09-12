@@ -9,8 +9,7 @@ import io.github.jerrymatera.gadsleaderboard.ui.main.MainActivity
 
 class SplashScreenActivity : AppCompatActivity() {
 
-    private  val splashTime = 3000L
-    lateinit var myHandler: Handler
+    private  val SPLASH_TIME = 3000L
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -20,7 +19,7 @@ class SplashScreenActivity : AppCompatActivity() {
             val intent = Intent(this, MainActivity::class.java)
             startActivity(intent)
             finish()
-        }, 3000)
+        }, SPLASH_TIME)
     }
 
 }
