@@ -2,17 +2,20 @@
 <navigation xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
-    android:id="@+id/nav_graph"
-    app:startDestination="@id/mainActivity">
-
-    <activity
-        android:id="@+id/mainActivity"
-        android:name="io.github.jerrymatera.gadsleaderboard.ui.main.MainActivity"
-        android:label="activity_main"
-        tools:layout="@layout/activity_main" />
+    android:id="@+id/nav_graph.xml"
+    app:startDestination="@id/mainFragment">
+    <fragment
+        android:id="@+id/mainFragment"
+        android:name="io.github.jerrymatera.gadsleaderboard.ui.main.view.MainFragment"
+        android:label="fragment_main"
+        tools:layout="@layout/fragment_main" >
+        <action
+            android:id="@+id/action_mainFragment_to_submitFragment"
+            app:destination="@id/submitFragment" />
+    </fragment>
     <fragment
         android:id="@+id/submitFragment"
-        android:name="io.github.jerrymatera.gadsleaderboard.ui.submit.SubmitFragment"
+        android:name="io.github.jerrymatera.gadsleaderboard.ui.main.view.SubmitFragment"
         android:label="fragment_submit"
         tools:layout="@layout/fragment_submit" />
 </navigation>

@@ -1,10 +1,10 @@
-package io.github.jerrymatera.gadsleaderboard.ui.submit
+package io.github.jerrymatera.gadsleaderboard.ui.main.view
 
 import android.os.Bundle
-import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import androidx.fragment.app.Fragment
 import io.github.jerrymatera.gadsleaderboard.R
 
 // TODO: Rename parameter arguments, choose names that match

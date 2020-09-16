@@ -1,12 +1,14 @@
-package io.github.jerrymatera.gadsleaderboard.ui.main
+package io.github.jerrymatera.gadsleaderboard.ui.main.view
 
-import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import androidx.appcompat.app.AppCompatActivity
 import io.github.jerrymatera.gadsleaderboard.R
 
 class MainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
+
     }
+
 }

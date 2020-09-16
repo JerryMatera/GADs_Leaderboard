@@ -1,4 +1,4 @@
-package io.github.jerrymatera.gadsleaderboard.models
+package io.github.jerrymatera.gadsleaderboard.data.models
 
 data class LearningLeader(
     val badgeUrl: String,
