@@ -1,8 +1,14 @@
 package io.github.jerrymatera.gadsleaderboard.data.models
 
+import com.google.gson.annotations.SerializedName
+
 data class SkillIQLeader(
-    val badgeUrl: String,
-    val country: String,
+    @SerializedName("name")
     val name: String,
-    val score: Int
+    @SerializedName("score")
+    val score: Int,
+    @SerializedName("country")
+    val country: String,
+    @SerializedName("badgeUrl")
+    val badgeUrl: String
 )
