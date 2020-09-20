@@ -5,7 +5,7 @@
     android:id="@+id/skilliq_leaders"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".ui.main.view.SkillIQLeadersFragment">
+    tools:context=".ui.view.SkillIQLeadersFragment">
 
     <androidx.recyclerview.widget.RecyclerView
         android:layout_width="match_parent"

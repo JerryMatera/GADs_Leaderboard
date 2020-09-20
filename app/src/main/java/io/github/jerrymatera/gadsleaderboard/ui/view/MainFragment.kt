@@ -1,4 +1,4 @@
-package io.github.jerrymatera.gadsleaderboard.ui.main.view
+package io.github.jerrymatera.gadsleaderboard.ui.view
 
 import android.os.Bundle
 import android.view.LayoutInflater
@@ -10,7 +10,7 @@ import androidx.viewpager2.widget.ViewPager2
 import com.google.android.material.button.MaterialButton
 import com.google.android.material.tabs.TabLayoutMediator
 import io.github.jerrymatera.gadsleaderboard.R
-import io.github.jerrymatera.gadsleaderboard.ui.main.adapter.LeaderBoardStateAdapter
+import io.github.jerrymatera.gadsleaderboard.ui.adapter.LeaderBoardStateAdapter
 import kotlinx.android.synthetic.main.fragment_main.*
 
 class MainFragment : Fragment() {

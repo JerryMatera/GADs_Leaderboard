@@ -1,4 +1,4 @@
-package io.github.jerrymatera.gadsleaderboard.ui.main.view
+package io.github.jerrymatera.gadsleaderboard.ui.view
 
 import android.os.Bundle
 import android.view.LayoutInflater
@@ -7,11 +7,11 @@ import android.view.ViewGroup
 import androidx.fragment.app.Fragment
 import io.github.jerrymatera.gadsleaderboard.R
 
-class SkillIQLeadersFragment : Fragment() {
+class LearningLeadersFragment : Fragment() {
 
     companion object {
         fun newInstance() =
-            SkillIQLeadersFragment()
+            LearningLeadersFragment()
     }
 
     override fun onCreateView(
@@ -19,8 +19,6 @@ class SkillIQLeadersFragment : Fragment() {
         savedInstanceState: Bundle?
     ): View? {
         // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_skilliq_leaders, container, false)
+        return inflater.inflate(R.layout.fragment_learning_leaders, container, false)
     }
-
-
 }

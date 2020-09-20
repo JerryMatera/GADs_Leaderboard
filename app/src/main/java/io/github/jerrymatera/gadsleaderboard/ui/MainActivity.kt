@@ -1,4 +1,4 @@
-package io.github.jerrymatera.gadsleaderboard.ui.main.view
+package io.github.jerrymatera.gadsleaderboard.ui
 
 import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity

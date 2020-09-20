@@ -4,7 +4,7 @@ import android.content.Intent
 import android.os.Bundle
 import android.os.Handler
 import androidx.appcompat.app.AppCompatActivity
-import io.github.jerrymatera.gadsleaderboard.ui.main.view.MainActivity
+import io.github.jerrymatera.gadsleaderboard.ui.MainActivity
 
 class SplashScreenActivity : AppCompatActivity() {
 

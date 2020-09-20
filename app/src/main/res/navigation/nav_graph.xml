@@ -6,7 +6,7 @@
     app:startDestination="@id/mainFragment">
     <fragment
         android:id="@+id/mainFragment"
-        android:name="io.github.jerrymatera.gadsleaderboard.ui.main.view.MainFragment"
+        android:name="io.github.jerrymatera.gadsleaderboard.ui.view.MainFragment"
         android:label="fragment_main"
         tools:layout="@layout/fragment_main" >
         <action
@@ -16,7 +16,7 @@
     </fragment>
     <fragment
         android:id="@+id/submitFragment"
-        android:name="io.github.jerrymatera.gadsleaderboard.ui.main.view.SubmitFragment"
+        android:name="io.github.jerrymatera.gadsleaderboard.ui.SubmitFragment"
         android:label="fragment_submit"
         tools:layout="@layout/fragment_submit" />
 </navigation>
