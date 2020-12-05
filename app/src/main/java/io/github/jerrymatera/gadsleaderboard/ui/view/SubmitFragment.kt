@@ -15,7 +15,10 @@ class SubmitFragment : Fragment() {
         savedInstanceState: Bundle?
     ): View? {
         // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_submit, container, false)
+        val view: View = inflater.inflate(R.layout.fragment_submit, container, false)
+
+
+        return view;
     }
 
 }

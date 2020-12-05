@@ -2,9 +2,12 @@ package io.github.jerrymatera.gadsleaderboard
 
 import android.content.Intent
 import android.os.Bundle
-import android.os.Handler
 import androidx.appcompat.app.AppCompatActivity
 import io.github.jerrymatera.gadsleaderboard.ui.MainActivity
+import kotlinx.coroutines.CoroutineScope
+import kotlinx.coroutines.Dispatchers
+import kotlinx.coroutines.delay
+import kotlinx.coroutines.launch
 
 class SplashScreenActivity : AppCompatActivity() {
 
@@ -12,11 +15,11 @@ class SplashScreenActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_splash_screen)
 
-        Handler().postDelayed({
-            val intent = Intent(this, MainActivity::class.java)
-            startActivity(intent)
+        CoroutineScope(Dispatchers.Main).launch {
+            delay(3000)
+            startActivity(Intent(this@SplashScreenActivity, MainActivity::class.java))
             finish()
-        }, 3000)
+        }
     }
 
 }
