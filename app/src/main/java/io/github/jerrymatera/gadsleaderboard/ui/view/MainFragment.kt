@@ -5,13 +5,13 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.Fragment
-import androidx.navigation.fragment.findNavController
-import androidx.viewpager2.widget.ViewPager2
-import com.google.android.material.button.MaterialButton
+import androidx.navigation.Navigation
 import com.google.android.material.tabs.TabLayoutMediator
 import io.github.jerrymatera.gadsleaderboard.R
+import io.github.jerrymatera.gadsleaderboard.databinding.FragmentMainBinding
+import io.github.jerrymatera.gadsleaderboard.ui.adapter.LEARNING_LEADERS_INDEX
 import io.github.jerrymatera.gadsleaderboard.ui.adapter.LeaderBoardStateAdapter
-import kotlinx.android.synthetic.main.fragment_main.*
+import io.github.jerrymatera.gadsleaderboard.ui.adapter.SKILL_IQ_LEADERS_INDEX
 
 class MainFragment : Fragment() {
 
@@ -20,23 +20,27 @@ class MainFragment : Fragment() {
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
-        return inflater.inflate(R.layout.fragment_main, container, false)
+        val binding = FragmentMainBinding.inflate(inflater, container, false)
+        val tabLayout = binding.tabs
+        val viewPager = binding.viewPager
+
+        binding.submitBtn.setOnClickListener(Navigation.createNavigateOnClickListener(R.id.action_mainFragment_to_submitFragment))
+
+        viewPager.adapter = LeaderBoardStateAdapter(this)
+
+        TabLayoutMediator(tabLayout, viewPager) { tab, position ->
+            tab.text = getTabTitle(position)
+        }.attach()
+
+        return binding.root
     }
 
-    override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
-        super.onViewCreated(view, savedInstanceState)
-
-        val submitBtn = view.findViewById<MaterialButton>(R.id.submit_btn)
-        submitBtn.setOnClickListener {
-            findNavController().navigate(R.id.action_mainFragment_to_submitFragment, null)
+    private fun getTabTitle(position: Int): String? {
+        return when (position) {
+            LEARNING_LEADERS_INDEX -> getString(R.string.learning_leaders)
+            SKILL_IQ_LEADERS_INDEX -> getString(R.string.skill_iq_leaders)
+            else -> null
         }
-
-        val viewPager = view.findViewById<ViewPager2>(R.id.viewPager)
-        val adapter = LeaderBoardStateAdapter(this@MainFragment)
-        viewPager.adapter = adapter
-        TabLayoutMediator(tabLayout, viewPager) { tab, position ->
-            tab.text = adapter.getTitle(position)
-        }.attach()
     }
 
 

@@ -5,20 +5,17 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.Fragment
-import io.github.jerrymatera.gadsleaderboard.R
+import io.github.jerrymatera.gadsleaderboard.databinding.FragmentLearningLeadersBinding
 
 class LearningLeadersFragment : Fragment() {
-
-    companion object {
-        fun newInstance() =
-            LearningLeadersFragment()
-    }
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
-        // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_learning_leaders, container, false)
+        val binding = FragmentLearningLeadersBinding.inflate(inflater, container, false)
+
+
+        return binding.root
     }
 }

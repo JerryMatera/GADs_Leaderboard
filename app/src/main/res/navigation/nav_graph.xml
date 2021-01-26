@@ -8,15 +8,32 @@
         android:id="@+id/mainFragment"
         android:name="io.github.jerrymatera.gadsleaderboard.ui.view.MainFragment"
         android:label="fragment_main"
-        tools:layout="@layout/fragment_main" >
+        tools:layout="@layout/fragment_main">
         <action
             android:id="@+id/action_mainFragment_to_submitFragment"
             app:destination="@id/submitFragment"
             app:popUpTo="@id/mainFragment" />
+        <action
+            android:id="@+id/action_mainFragment_to_learningLeadersFragment"
+            app:destination="@id/learningLeadersFragment" />
     </fragment>
     <fragment
         android:id="@+id/submitFragment"
-        android:name="io.github.jerrymatera.gadsleaderboard.ui.SubmitFragment"
+        android:name="io.github.jerrymatera.gadsleaderboard.ui.view.SubmitFragment"
         android:label="fragment_submit"
         tools:layout="@layout/fragment_submit" />
+    <fragment
+        android:id="@+id/learningLeadersFragment"
+        android:name="io.github.jerrymatera.gadsleaderboard.ui.view.LearningLeadersFragment"
+        android:label="fragment_learning_leaders"
+        tools:layout="@layout/fragment_learning_leaders">
+        <action
+            android:id="@+id/action_learningLeadersFragment_to_skillIQLeadersFragment"
+            app:destination="@id/skillIQLeadersFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/skillIQLeadersFragment"
+        android:name="io.github.jerrymatera.gadsleaderboard.ui.view.SkillIQLeadersFragment"
+        android:label="fragment_skilliq_leaders"
+        tools:layout="@layout/fragment_skilliq_leaders" />
 </navigation>

@@ -4,11 +4,18 @@
         <!-- Customize your theme here. -->
         <item name="colorPrimary">@color/primaryColor</item>
         <item name="colorPrimaryDark">@color/primaryDarkColor</item>
+        <item name="colorOnSurface">@color/primaryColor</item>
         <item name="colorAccent">@color/secondaryColor</item>
+
+        <item name="android:windowBackground">@drawable/launch_bg</item>
     </style>
 
     <style name="Theme.AppTheme.SplashScreen" parent="Theme.MaterialComponents.DayNight.NoActionBar">
         <item name="android:windowBackground">@drawable/launch</item>
         <item name="android:windowFullscreen">true</item>
+    </style>
+
+    <style name="TextAppearance.AppTheme.Toolbar.Text" parent="TextAppearance.MaterialComponents.Headline5">
+        <item name="android:textColor">?attr/colorOnSurface</item>
     </style>
 </resources>
