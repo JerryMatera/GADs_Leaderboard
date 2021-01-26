@@ -1,4 +1,4 @@
-package io.github.jerrymatera.gadsleaderboard.data.api
+package io.github.jerrymatera.gadsleaderboard.data.network
 
 import com.google.gson.GsonBuilder
 import retrofit2.Retrofit

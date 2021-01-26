@@ -1,4 +1,4 @@
-package io.github.jerrymatera.gadsleaderboard.data.api
+package io.github.jerrymatera.gadsleaderboard.data.network
 
 import io.github.jerrymatera.gadsleaderboard.data.models.LearningLeader
 import io.github.jerrymatera.gadsleaderboard.data.models.SkillIQLeader
