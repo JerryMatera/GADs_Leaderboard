@@ -12,3 +12,4 @@ data class LearningLeader(
     @SerializedName("badgeUrl")
     val badgeUrl: String
 )
+
