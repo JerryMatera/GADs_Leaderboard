@@ -3,8 +3,12 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools">
 
+
     <data>
 
+        <variable
+            name="learner"
+            type="io.github.jerrymatera.gadsleaderboard.data.models.LearningLeader" />
     </data>
 
     <com.google.android.material.card.MaterialCardView
@@ -37,7 +41,7 @@
                 android:layout_marginTop="16dp"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintHorizontal_bias="0.15"
-                app:layout_constraintStart_toEndOf="@+id/skill_iq_image"
+                app:layout_constraintStart_toEndOf="@+id/learner_image"
                 app:layout_constraintTop_toTopOf="parent"
                 tools:text="Jerry Onyango" />
 
